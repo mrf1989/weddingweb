@@ -67,9 +67,10 @@ export default function contactView(props) {
       <h3 class="upper-text">2 de noviembre de 2024. 12:00</h3>
       <p class="italic-text">Finca Puerta de Hierro</p>
     </header>
-    <main class="block-content">`
-    + mainContent +
-    `</main>
+    <main class="block-content">
+      ${mainContent}
+      <p><a href="/">Volver</a></p>
+    </main>
     <footer class="block-content">
       <div class="content">
         <h3>Ceremonia y celebración</h3>

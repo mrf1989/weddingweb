@@ -78,6 +78,7 @@ a:hover,
 
 main.block-content {
   background-color: #d2e4b4;
+  height: auto;
 }
 
 .content {
@@ -101,4 +102,22 @@ main.block-content {
   border-bottom: 1px solid #557c70;
   width: 66%;
   margin: 1em auto 1.5em auto;
+}
+
+@media(max-width: 429px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header h3 {
+    font-size: .9em;
+  }
+
+  footer.block-content {
+    height: auto;
+  }
+
+  .title-content {
+    font-size: .9em;
+  }
 }

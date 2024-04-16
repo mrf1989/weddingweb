@@ -7,7 +7,7 @@ export default function dbConnect() {
     console.log(`Trying to connect database to: ${URL_DB}`);
     const db = mongoose.connection;
     db.on("error", console.error.bind(console, "db connection error: "));
-    return mongoose.connect(URL_DB, { useNewUrlParser: true });
+    return mongoose.connect(URL_DB);
   } catch (error) {
     console.error(`DATABASE CONNECTION ERROR: ${error}`);
   }
