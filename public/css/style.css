@@ -22,7 +22,8 @@ p {
   padding-bottom: 1em;
 }
 
-a {
+a,
+.btn {
   background-color: #557c70;
   color: white;
   font-family: "Young Serif", serif;
@@ -31,7 +32,8 @@ a {
   transition: .7s ease-out;
 }
 
-a:hover {
+a:hover,
+.btn:hover {
   border-radius: 8px;
   transition: .7s ease-in;
 }
@@ -79,7 +81,8 @@ main.block-content {
 }
 
 .content {
-  max-width: 80vw;
+  width: 80vw;
+  max-width: 800px;
 }
 
 .title-content {
@@ -99,66 +102,3 @@ main.block-content {
   width: 66%;
   margin: 1em auto 1.5em auto;
 }
-
-/*
-.block-content {
-  border: 2px solid red;
-}
-*/
-
-
-
-
-
-/* SLIDER CARRUSEL CSS
-
-#slide-1 {
-  background-color: aquamarine;
-}
-
-#slide-2 {
-  background-color: chocolate;
-}
-
-#slide-3 {
-  background-color: violet;
-}
-
-.slider {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-.slide {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.slider-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vw;
-  background-color: rgba(0, 0, 0 , 0.5);
-  z-index: 10000;
-}
-
-.slider-title {
-  position: absolute;
-  top: 55%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  color: white;
-}
-
-.showing {
-  z-index: 1000;
-}
-*/

@@ -1,0 +1,54 @@
+main.block-content {
+  height: auto;
+}
+
+input,
+textarea {
+  color: #303030;
+  font-size: 1.1em;
+  border-radius: 5px;
+  background-color: #fffef8;
+  border: 1px solid #557c70;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1.2px solid #557c70;
+}
+
+input[type="radio"] {
+  width: auto;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  box-shadow: 0.3rem 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+}
+
+input,
+textarea,
+.btn {
+  padding: .7em 1em;
+}
+
+textarea {
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.btn {
+  border: 0;
+}
+
+.form-line {
+  margin-bottom: 1.1em;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}

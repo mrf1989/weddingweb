@@ -1,19 +1,20 @@
+import "dotenv/config";
 import express from "express";
-import { fileURLToPath } from "url";
-import path, { dirname } from "path";
 import router from "./router.js";
+import dbConnect from "./database.js";
 
 const PORT = process.env.PORT || 3000;
 
 const app = express();
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 export default function startServer() {
-  app.use(express.static("./public"));
+  app.use(express.urlencoded({ extended: true }));
   app.use("/", router);
+  app.use(express.static("./public"));
 
-
+  dbConnect().then(() => {
+    console.log("⚡️ Database connect well done!");
+  });
 
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

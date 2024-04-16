@@ -1,0 +1,18 @@
+main.block-content {
+  height: auto;
+}
+
+.guest-card {
+  background-color: white;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.guest-card ul {
+  padding-left: 2.5em;
+  font-family: "Playfair Display", serif;
+}
