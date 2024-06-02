@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-attachment: fixed;
+  background-color: #D2E4B4;
+  background-image: url("../assets/images/mario-cristina.jpeg");
+  background-position: -30px -200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #557c70;
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+  padding-bottom: 1rem;
+}
+
+.text-content {
+  width: 80vw;
+  max-width: 800px;
+}
+
+.title-content {
+  margin: 1.5rem auto;
+  background-color: white;
+  padding: .5rem 1.5rem;
+}
+
+a,
+.btn {
+  background-color: #557c70;
+  color: white;
+  font-family: "Young Serif", serif;
+  padding: .2rem .4rem;
+  text-decoration: none;
+  transition: .7s ease-out;
+}
+
+.secondary-btn {
+  background-color: #75485E;
+}
+
+a:hover,
+.btn:hover {
+  border-radius: 8px;
+  transition: .7s ease-in;
+}
+
+.upper-text {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.italic-text {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.shadow {
+  text-shadow: #cfcfcf 1px 0 10px;
+}
+
+.block-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem .8rem;
+}
+
+/* ------------- */
+/*     HEADER    */
+/* ------------- */
+
+#header {
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+#header h1 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+#header h3 {
+  font-size: 0.8rem;
+  margin: .3rem 0;
+}
+
+.header-info-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(85, 124, 112, 0.4);
+  padding: 2.5rem 1rem;
+  margin: 5rem auto;
+  border: 1px solid rgba(207, 207, 207, 0.9);
+  box-shadow: rgba(207, 207, 207, 0.8) 1px 0 10px;
+}
+
+/* ------------- */
+/*      MAIN     */
+/* ------------- */
+
+main.block-content {
+  background-color: #d2e4b4;
+  height: auto;
+  position: relative;
+}
+
+.title-content {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+/* ------------- */
+/*     FOOTER    */
+/* ------------- */
+
+footer {
+  background-color: white;
+}
+
+.footer-end {
+  background-color: #75485E;
+  height: 20px;
+  width: 100%;
+}
+
+.separator {
+  border-bottom: 1px solid #75485E;
+  width: 66%;
+  margin: 1em auto 1.5em auto;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 415px) {
+  body {
+    background-position: 0 -215px;
+  }
+}
+
+/* SM - Small Devices */
+@media screen and (min-width: 576px) {
+  body {
+    background-position: 0 -270px;
+  }
+
+  #header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .header-info-wrapper {
+    padding: 2rem;
+    margin: 6rem auto;
+  }
+
+  .title-content {
+    font-size: 1.1rem;
+  }
+}
+
+/* MD - Medium Devices */
+@media screen and (min-width: 768px) {
+  body {
+    background-position: 0 -355px;
+  }
+  
+  #header h1 {
+    font-size: 1.9rem;
+  }
+
+  #header h3 {
+    font-size: 1rem;
+  }
+  
+  .header-info-wrapper {
+    margin: 10rem auto;
+    padding: 2rem 4rem;
+  }
+}
+
+/* LG - Large Devices */
+@media screen and (min-width: 992px) {
+  body {
+    background-position: 0 -470px;
+  }
+
+  #header h1 {
+    font-size: 2.3rem;
+  }
+
+  #header h3 {
+    font-size: 1.3rem;
+  }
+
+  #header p {
+    font-size: 1.2rem;
+  }
+  
+  .header-info-wrapper {
+    margin: 12rem auto;
+    padding: 2.6rem 6rem;
+  }
+}
+
+/* XL - Extra Large Devices */
+@media screen and (min-width: 1200px) {
+  body {
+    background-position: 0 -680px;
+  }
+  
+  #header {
+    height: 100vh;
+  }
+
+  #header h1 {
+    font-size: 2.6rem;
+  }
+
+  #header h3 {
+    font-size: 1.6rem;
+  }
+
+  #header p {
+    font-size: 1.4rem;
+  }
+  
+  .header-info-wrapper {
+    margin: 12rem auto;
+    padding: 2.6rem 6rem;
+  }
+
+  .block-content {
+    text-align: center;
+  }
+}
+
+/* XXL - Double Extra Large Devices */
+@media screen and (min-width: 1400px) {
+  body {
+    background-position: 0 -850px;
+  }
+
+  .header-info-wrapper {
+    margin: 12rem auto;
+    padding: 2.6rem 10rem;
+  }
+
+  .block-content {
+    min-height: 500px;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}

@@ -47,10 +47,10 @@ textarea {
   margin-bottom: 1.1em;
 }
 
-.hidden {
-  display: none;
+.text-small {
+  font-size: .85rem;
 }
 
-.show {
-  display: block;
+.content-form {
+  max-width: 900px;
 }

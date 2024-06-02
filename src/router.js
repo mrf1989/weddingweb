@@ -8,11 +8,13 @@ const router = express.Router();
 
 router
   .get("/", (req, res) => {
-    const response = indexView();
+    const props = {};
+    const response = indexView(props);
     res.send(response);
   })
   .get("/contacto", (req, res) => {
-    const response = contactView();
+    const props = {};
+    const response = contactView(props);
     res.send(response);
   })
   .post("/contacto", async (req, res) => {
@@ -23,7 +25,7 @@ router
   })
   .get("/guests", async (req, res) => {
     const guests = await getAllGuests();
-    const response = guestsView(guests);
+    const response = guestsView({ guests });
     res.send(response);
   });
 
