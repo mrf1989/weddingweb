@@ -2,8 +2,6 @@ import headerView from "./templates/header.js";
 import footerView from "./templates/footer.js";
 
 export default function indexView(props) {
-  props.js = `<script src="./js/accordion.js"></script>`;
-  props.css = `<link rel="stylesheet" href="./css/invitation.css">`;
   props.contact = true;
 
   return `
