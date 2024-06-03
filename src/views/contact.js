@@ -6,7 +6,7 @@ export default function contactView(props) {
   props.css = `<link rel="stylesheet" href="./css/contact-form.css">`;
 
   const form = `
-  <h3 class="upper-text title-content">Contacta con nosotros</h3>
+  <h3 class="upper-text title-content">Confirma tu asistencia</h3>
   <div class="content-form">
     <form id="contactForm" action="/contacto" method="post">
       <div class="form-line">
@@ -24,8 +24,10 @@ export default function contactView(props) {
       </div>
       <div id="companionNameForm" class="form-line hidden">
         <label>¿Quién viene contigo?<br>
-          <input type="text" name="companionName" id="companionName" placeholder="Su nombre...">
+          <div id="guestsGroup"></div>
         </label>
+        <button id="addGuest" class="btn">+ Añadir otra persona</button>
+        <button id="removeGuest" class="btn secondary-btn hidden">Quitar persona</button>
       </div>
       <div class="form-line">
         <label>¿Cómo podemos contactarte?<br>
@@ -34,7 +36,7 @@ export default function contactView(props) {
       </div>
       <div class="form-line">
         <label for="message">Lo que quieras decirnos...<br>
-          <p class="text-small">Para que todo sea perfecto, por favor, indica cualquier intolerancia o alergia a alimentos que podáis tener, si necesitas espacio para carrito de bebé o cualquier cosa que te podamos facilitar.</p>
+          <p class="text-small">Por favor, indica cualquier intolerancia o alergia a alimentos que podáis tener, si necesitas espacio para carrito de bebé o cualquier otra cosa que te podamos facilitar para que todo sea perfecto.</p>
           <textarea cols="50" rows="8" form="contactForm" name="message" id="message" placeholder="Alergias, intolerancias o cualquier cosa a tener en cuenta..."></textarea>
         </label>
       </div>
@@ -42,9 +44,7 @@ export default function contactView(props) {
     </form>
   </div>`;
 
-  const msgConfirm = `
-  <h3 class="upper-text title-content">Gracias por contactar con nosotros</h3>
-  <p><a href="/">Volver a la invitación</a></p>`;
+  const msgConfirm = `<h3 class="upper-text title-content">Gracias por contactar con nosotros</h3>`;
 
   let mainContent = "";
   if (props) {

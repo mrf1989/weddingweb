@@ -54,3 +54,15 @@ textarea {
 .content-form {
   max-width: 900px;
 }
+
+.guest-input {
+  margin-bottom: .8rem;
+}
+
+form {
+  text-align: left;
+}
+
+.show-btn {
+  display: inline-block;
+}

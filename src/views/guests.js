@@ -18,7 +18,7 @@ export default function listAllGuests(props) {
   let guestsCount = props.guests.length;
 
   const guestsHTML = props.guests.map(guest => {
-    if (guest.companion === "Sí") guestsCount++;
+    if (guest.companion === "Sí") guestsCount += guest.companionName.length;
     return `
     <div class="guest-card">
       <div><b>${guest.guestName}</b></div>
@@ -35,7 +35,7 @@ export default function listAllGuests(props) {
   ${headerView(props)}
     <main class="block-content">
       <h3 class="upper-text title-content">Invitados confirmados</h3>
-      <p>Conteo aproximado: ${guestsCount} invitados</p>
+      <p>Conteo: ${guestsCount} invitados</p>
       <div class="guests-list">
         ${guestsHTML}
       </div>
