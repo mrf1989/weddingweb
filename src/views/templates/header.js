@@ -5,6 +5,20 @@ export default function headerView(props) {
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <meta property="og:site_name" content="Cristina & Mario" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cristina & Mario" />
+    <meta property="og:description" content="¡Queremos compartir contigo un día tan especial para nosotros!" />
+    <meta property="og:url" content="https://cristinaymario.es/" />
+    <meta property="og:image" content="./assets/images/link-card.png" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cristina & Mario" />
+    <meta name="twitter:description" content="¡Queremos compartir contigo un día tan especial para nosotros!" />
+    <meta name="twitter:url" content="https://cristinaymario.es/" />
+    <meta name="twitter:image" content="./assets/images/link-card.png" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
