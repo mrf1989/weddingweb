@@ -11,8 +11,8 @@ export default function indexView(props) {
       <div id="invitation" class="text-content">
         <p class="emojis">👰‍♀️🤵</p>
         <h3>Celebra este momento con nosotros</h3>
-        <p>Vamos a dar un gran paso en nuestro proyecto de vida, por lo que queremos hacerte partícipe de un día tan importante para nosotros.</p>
-        <p>Momentos como este son los que se recuerdan toda la vida, por lo que nos encantaría compartirlo con la gente más importante para nosotros. ¡Viviremos grandes momentos y lo pasaremos a lo grande!</p>
+        <p>Vamos a dar un gran paso en nuestro proyecto de vida y queremos hacerte partícipe de un día tan importante para nosotros.</p>
+        <p>Momentos como estos son los que se recuerdan durante toda la vida, por lo que nos encantaría compartirlos con la gente más importante para nosotros. ¡Juntos lo pasaremos a lo grande!</p>
       </div>
       <div id="accordionBtn"><div id="accordionBtnArrow"></div></div>
     </main>

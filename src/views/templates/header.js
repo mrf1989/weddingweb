@@ -11,7 +11,7 @@ export default function headerView(props) {
     <meta property="og:title" content="Cristina & Mario" />
     <meta property="og:description" content="¡Queremos compartir contigo un día tan especial para nosotros!" />
     <meta property="og:url" content="https://cristinaymario.es/" />
-    <meta property="og:image" content="./assets/images/link-card.png" />
+    <meta property="og:image" content="assets/images/link-card.png" />
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Cristina & Mario" />
