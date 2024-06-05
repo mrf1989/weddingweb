@@ -8,10 +8,13 @@ export default function contactView(props) {
   const form = `
   <h3 class="upper-text title-content">Confirma tu asistencia</h3>
   <div class="content-form">
-    <form id="contactForm" action="/contacto" method="post">
+    <form id="contactForm" action="/contacto" method="post" onsubmit="return onSubmitContactForm()">
       <div class="form-line">
+        <label for="guestUsername">
+          <input class="custom-input" type="text" title="guestUsername" name="guestUsername" id="guestUsername" autocomplete="off" tabindex="-1">
+        </label>
         <label>Nombre completo<br>
-          <input type="text" name="guestName" id="guestName" placeholder="Nombre y apellidos" required>
+          <input type="text" name="guestName" id="guestName" placeholder="Nombre y apellidos" autocomplete="off" required>
         </label>
       </div>
       <div class="form-line">
@@ -31,7 +34,7 @@ export default function contactView(props) {
       </div>
       <div class="form-line">
         <label>¿Cómo podemos contactarte?<br>
-          <input type="text" name="contact" id="contact" placeholder="Teléfono o email">
+          <input type="text" name="contact" id="contact" autocomplete="off" placeholder="Teléfono o email">
         </label>
       </div>
       <div class="form-line">

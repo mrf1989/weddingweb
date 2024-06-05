@@ -50,6 +50,7 @@ function newGuestInput(id) {
   newInput.className = "guest-input";
   newInput.name = "companionName";
   newInput.id = `companionName${id}`;
+  newInput.autocomplete = "off";
   newInput.placeholder = "Su nombre...";
   newInput.required = "required";
   
@@ -70,4 +71,9 @@ function evaluateGuestBtn() {
     removeBtn.classList.remove("show-btn");
     removeBtn.classList.add("hidden");
   }
+}
+
+function onSubmitContactForm() {
+  const guestUsername = document.getElementById("guestUsername");
+  return guestUsername.value.length == 0;
 }

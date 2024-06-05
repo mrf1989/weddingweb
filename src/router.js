@@ -20,8 +20,13 @@ router
   .post("/contacto", async (req, res) => {
     const body = req.body;
     const newGuest = await registerNewGuestContact(body);
-    const response = contactView({ formConfirmation: true });
-    res.send(response);
+    
+    if (!newGuest) {
+      res.redirect("/");
+    } else {
+      const response = contactView({ formConfirmation: true });
+      res.send(response);
+    }
   })
   .get("/guests", async (req, res) => {
     const guests = await getAllGuests();

@@ -4,6 +4,10 @@ export async function registerNewGuestContact(data) {
   try {
     const { guestName, companion, companionName, contact, message } = data;
 
+    if (data.guestUsername) {
+      throw new Error("SPAM IN GUEST CREATION");
+    }
+
     const newGuest = new Guest({
       guestName,
       companion,
