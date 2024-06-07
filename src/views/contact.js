@@ -47,7 +47,9 @@ export default function contactView(props) {
     </form>
   </div>`;
 
-  const msgConfirm = `<h3 class="upper-text title-content">Gracias por contactar con nosotros</h3>`;
+  const msgConfirm = `
+    <h3 class="upper-text title-content">¡Gracias por confirmar!</h3>
+  `;
 
   let mainContent = "";
   if (props) {
