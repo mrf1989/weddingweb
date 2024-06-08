@@ -11,7 +11,7 @@ html {
 body {
   background-attachment: fixed;
   background-color: #D2E4B4;
-  background-image: url("../assets/images/mario-y-cristina_bg.jpg");
+  background-image: url("../assets/images/mario-y-cristina_bg_576.jpg");
   background-position: -45px -95px;
   background-repeat: no-repeat;
   background-size: 130%;
@@ -203,6 +203,7 @@ footer {
 /* SM - Small Devices */
 @media screen and (min-width: 576px) {
   body {
+    background-image: url("../assets/images/mario-y-cristina_bg_768.jpg");
     background-size: 120%;
     background-position: -50px -240px;
   }
@@ -224,6 +225,7 @@ footer {
 /* MD - Medium Devices */
 @media screen and (min-width: 768px) {
   body {
+    background-image: url("../assets/images/mario-y-cristina_bg_992.jpg");
     background-size: 110%;;
     background-position: -35px -300px;
   }
@@ -255,6 +257,7 @@ footer {
 /* LG - Large Devices */
 @media screen and (min-width: 992px) {
   body {
+    background-image: url("../assets/images/mario-y-cristina_bg.jpg");
     background-position: 0 -390px;
     background-size: 100%;
   }
