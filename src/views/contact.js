@@ -20,9 +20,9 @@ export default function contactView(props) {
       <div class="form-line">
         <label>¿Te acompañará alguien?<br>
           <input type="radio" name="companion" id="companionTrue" value="Sí" required>
-          <label for="companionTrue">Sí</label><br>
+          <label class="radio-opt" for="companionTrue"> Sí</label>
           <input type="radio" name="companion" id="companionFalse" value="No">
-          <label for="companionFalse">No</label>
+          <label class="radio-opt" for="companionFalse"> No</label>
         </label>
       </div>
       <div id="companionNameForm" class="form-line hidden">

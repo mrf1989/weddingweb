@@ -19,11 +19,12 @@ export default function listAllGuests(props) {
 
   const guestsHTML = props.guests.map(guest => {
     if (guest.companion === "Sí") guestsCount += guest.companionName.length;
+    const companionList = guest.companionName.map(p => `<li>${p}</li>`).join("");
     return `
     <div class="guest-card">
       <div><b>${guest.guestName}</b></div>
       <ul>
-        ${guest.companion === "Sí" ? `<li>Le acompaña: ${guest.companionName}</li>` : ``}
+        ${guest.companion === "Sí" ? `<li>Le acompaña:<ul>${companionList}</ul></li>` : ``}
         ${guest.contact ? `<li>Contactar: ${guest.contact}</li>` : ``}
         ${guest.message ? `<li>Mensaje: ${guest.message}</li>` : ``}
       </ul>
