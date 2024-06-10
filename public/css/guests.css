@@ -12,9 +12,47 @@ main.block-content {
   margin: auto;
   margin-bottom: 1em;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .guest-card ul {
   padding-left: 2.5em;
   font-family: "Playfair Display", serif;
+}
+
+.delete-btn {
+  background-color: #75485e;
+  border-radius: 5px;
+  color: white;
+  padding: .5rem .7rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(40, 40, 40, .6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  text-align: center;
+  background-color: whitesmoke;
+  width: 80%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
 }

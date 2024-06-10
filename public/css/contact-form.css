@@ -19,6 +19,7 @@ textarea:focus {
 
 input[type="radio"] {
   width: auto;
+  margin-top: .7rem;
 }
 
 input[type="submit"] {
@@ -47,10 +48,6 @@ textarea {
   margin-bottom: 1.1em;
 }
 
-.text-small {
-  font-size: .85rem;
-}
-
 .content-form {
   max-width: 900px;
 }
@@ -65,4 +62,8 @@ form {
 
 .show-btn {
   display: inline-block;
+}
+
+.radio-opt {
+  margin-right: 1.2rem;
 }
