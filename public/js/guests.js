@@ -13,7 +13,7 @@ confirmBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const guestNode = document.getElementById("guestId");
   const guestId = guestNode.getAttribute("data-guest-id");
-  deleteGuest(guestId);
+  deleteGuest(guestId, true);
   cleanModal();
 })
 
@@ -32,7 +32,12 @@ function cleanModal() {
   modalWrapper.classList.add("hidden");
 }
 
-function deleteGuest(id) {
-  axios.delete(`/delete/${id}`)
-    .then(e => window.location.reload());
+function deleteGuest(id, confirmation) {
+  if (confirmation) {
+    axios.delete(`/delete/${id}`)
+      .then(e => window.location.reload())
+      .catch(err => console.error(err));
+  } else {
+    console.error("Unable to remove the guest");
+  }
 }

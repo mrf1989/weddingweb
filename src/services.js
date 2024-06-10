@@ -1,4 +1,5 @@
 import Guest from "./models/guest.js";
+import TrashGuest from "./models/trash-guest.js";
 
 export async function registerNewGuestContact(data) {
   try {
@@ -28,20 +29,25 @@ export async function getAllGuests() {
   return guests;
 }
 
-export async function deleteGuest(data) {
+export async function deleteGuest(id) {
   try {
-    const { id, confirmation } = data;
-    const deleteError = new Error("GUEST DELETE ERROR");
-
-    if (confirmation) {
-      const result = await Guest.findByIdAndDelete(id);
-      if (result) {
-        return result;
-      }
-    } else {
-      throw deleteError;
+    const result = await Guest.findByIdAndDelete(id);
+    if (result) {
+      await guestToTrash(result);
+      return result;
     }
   } catch (error) {
     console.error(`GUEST DELETE ERROR: ${error}`)
   }
+}
+
+async function guestToTrash(guest) {
+  const guestToTrash = new TrashGuest({
+    guestName: guest.guestName,
+    companion: guest.companion,
+    companionName: guest.companionName,
+    contact: guest.contact,
+    message: guest.message,
+  });
+  await guestToTrash.save();
 }

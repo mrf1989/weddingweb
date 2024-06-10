@@ -35,7 +35,7 @@ router
   })
   .delete("/delete/:id", async (req, res) => {
     const id = req.params.id;
-    const response = await deleteGuest({ id, confirmation: true});
+    const response = await deleteGuest(id);
     if (response) {
       res.sendStatus(204);
     } else {
