@@ -27,3 +27,21 @@ export async function getAllGuests() {
   const guests = Guest.find({});
   return guests;
 }
+
+export async function deleteGuest(data) {
+  try {
+    const { id, confirmation } = data;
+    const deleteError = new Error("GUEST DELETE ERROR");
+
+    if (confirmation) {
+      const result = await Guest.findByIdAndDelete(id);
+      if (result) {
+        return result;
+      }
+    } else {
+      throw deleteError;
+    }
+  } catch (error) {
+    console.error(`GUEST DELETE ERROR: ${error}`)
+  }
+}

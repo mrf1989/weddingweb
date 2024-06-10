@@ -87,6 +87,10 @@ a:hover,
   text-shadow: #cfcfcf 1px 0 10px;
 }
 
+.text-small {
+  font-size: .85rem;
+}
+
 .block-content {
   display: flex;
   flex-direction: column;

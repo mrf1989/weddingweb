@@ -63,7 +63,6 @@ function removeGuestInput() {
 }
 
 function evaluateGuestBtn() {
-  console.log(inputs.length);
   if (inputs.length > 1) {
     removeBtn.classList.remove("hidden");
     removeBtn.classList.add("show-btn");

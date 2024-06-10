@@ -2,7 +2,7 @@ import express from "express";
 import contactView from "./views/contact.js";
 import indexView from "./views/index.js";
 import guestsView from "./views/guests.js";
-import { registerNewGuestContact, getAllGuests } from "./services.js";
+import { registerNewGuestContact, getAllGuests, deleteGuest } from "./services.js";
 
 const router = express.Router();
 
@@ -32,6 +32,15 @@ router
     const guests = await getAllGuests();
     const response = guestsView({ guests });
     res.send(response);
+  })
+  .delete("/delete/:id", async (req, res) => {
+    const id = req.params.id;
+    const response = await deleteGuest({ id, confirmation: true});
+    if (response) {
+      res.sendStatus(204);
+    } else {
+      res.sendStatus(500);
+    }
   });
 
 export default router;
